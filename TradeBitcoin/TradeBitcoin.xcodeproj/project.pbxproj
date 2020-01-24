@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8A1FBADD23DB24480070279F /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A1FBADC23DB24480070279F /* SnapKit.framework */; };
 		8A46A23223DB1917000700AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A46A23123DB1917000700AE /* AppDelegate.swift */; };
 		8A46A23423DB1917000700AE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A46A23323DB1917000700AE /* SceneDelegate.swift */; };
-		8A46A23623DB1917000700AE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A46A23523DB1917000700AE /* ViewController.swift */; };
-		8A46A23923DB1917000700AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A46A23723DB1917000700AE /* Main.storyboard */; };
 		8A46A23B23DB1919000700AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A46A23A23DB1919000700AE /* Assets.xcassets */; };
-		8A46A23E23DB1919000700AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A46A23C23DB1919000700AE /* LaunchScreen.storyboard */; };
 		8A46A24923DB1919000700AE /* TradeBitcoinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A46A24823DB1919000700AE /* TradeBitcoinTests.swift */; };
+		8A5DCF8923DB2AE600B0BC1D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5DCF8823DB2AE600B0BC1D /* MainViewController.swift */; };
+		8A5DCF8B23DB2FE500B0BC1D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A5DCF8A23DB2FE500B0BC1D /* Default-568h@2x.png */; };
+		8A5DCF8C23DB311C00B0BC1D /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A1FBADC23DB24480070279F /* SnapKit.framework */; };
+		8A5DCF8D23DB311C00B0BC1D /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8A1FBADC23DB24480070279F /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,19 +27,32 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		8A5DCF8E23DB311C00B0BC1D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8A5DCF8D23DB311C00B0BC1D /* SnapKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		8A1FBADC23DB24480070279F /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		8A46A22E23DB1917000700AE /* TradeBitcoin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TradeBitcoin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A46A23123DB1917000700AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8A46A23323DB1917000700AE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8A46A23523DB1917000700AE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8A46A23823DB1917000700AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8A46A23A23DB1919000700AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8A46A23D23DB1919000700AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8A46A23F23DB1919000700AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A46A24423DB1919000700AE /* TradeBitcoinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TradeBitcoinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A46A24823DB1919000700AE /* TradeBitcoinTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeBitcoinTests.swift; sourceTree = "<group>"; };
 		8A46A24A23DB1919000700AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A5DCF8823DB2AE600B0BC1D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		8A5DCF8A23DB2FE500B0BC1D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,7 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A1FBADD23DB24480070279F /* SnapKit.framework in Frameworks */,
+				8A5DCF8C23DB311C00B0BC1D /* SnapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +77,7 @@
 		8A46A22523DB1917000700AE = {
 			isa = PBXGroup;
 			children = (
+				8A5DCF8A23DB2FE500B0BC1D /* Default-568h@2x.png */,
 				8A46A23023DB1917000700AE /* TradeBitcoin */,
 				8A46A24723DB1919000700AE /* TradeBitcoinTests */,
 				8A46A22F23DB1917000700AE /* Products */,
@@ -85,10 +99,8 @@
 			children = (
 				8A46A23123DB1917000700AE /* AppDelegate.swift */,
 				8A46A23323DB1917000700AE /* SceneDelegate.swift */,
-				8A46A23523DB1917000700AE /* ViewController.swift */,
-				8A46A23723DB1917000700AE /* Main.storyboard */,
+				8A5DCF8823DB2AE600B0BC1D /* MainViewController.swift */,
 				8A46A23A23DB1919000700AE /* Assets.xcassets */,
-				8A46A23C23DB1919000700AE /* LaunchScreen.storyboard */,
 				8A46A23F23DB1919000700AE /* Info.plist */,
 			);
 			path = TradeBitcoin;
@@ -113,6 +125,7 @@
 				8A46A22A23DB1917000700AE /* Sources */,
 				8A46A22B23DB1917000700AE /* Frameworks */,
 				8A46A22C23DB1917000700AE /* Resources */,
+				8A5DCF8E23DB311C00B0BC1D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -184,9 +197,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A46A23E23DB1919000700AE /* LaunchScreen.storyboard in Resources */,
 				8A46A23B23DB1919000700AE /* Assets.xcassets in Resources */,
-				8A46A23923DB1917000700AE /* Main.storyboard in Resources */,
+				8A5DCF8B23DB2FE500B0BC1D /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,9 +216,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A46A23623DB1917000700AE /* ViewController.swift in Sources */,
 				8A46A23223DB1917000700AE /* AppDelegate.swift in Sources */,
 				8A46A23423DB1917000700AE /* SceneDelegate.swift in Sources */,
+				8A5DCF8923DB2AE600B0BC1D /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,25 +239,6 @@
 			targetProxy = 8A46A24523DB1919000700AE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		8A46A23723DB1917000700AE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8A46A23823DB1917000700AE /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		8A46A23C23DB1919000700AE /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8A46A23D23DB1919000700AE /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		8A46A24B23DB1919000700AE /* Debug */ = {
@@ -366,8 +359,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = MKA9RVA5U8;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -379,8 +373,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = az.com.TradeBitcoin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -388,8 +383,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = MKA9RVA5U8;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -401,8 +397,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = az.com.TradeBitcoin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
