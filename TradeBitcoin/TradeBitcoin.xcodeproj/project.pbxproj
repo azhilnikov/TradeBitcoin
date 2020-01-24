@@ -1,0 +1,484 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8A1FBADD23DB24480070279F /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A1FBADC23DB24480070279F /* SnapKit.framework */; };
+		8A46A23223DB1917000700AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A46A23123DB1917000700AE /* AppDelegate.swift */; };
+		8A46A23423DB1917000700AE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A46A23323DB1917000700AE /* SceneDelegate.swift */; };
+		8A46A23623DB1917000700AE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A46A23523DB1917000700AE /* ViewController.swift */; };
+		8A46A23923DB1917000700AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A46A23723DB1917000700AE /* Main.storyboard */; };
+		8A46A23B23DB1919000700AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A46A23A23DB1919000700AE /* Assets.xcassets */; };
+		8A46A23E23DB1919000700AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A46A23C23DB1919000700AE /* LaunchScreen.storyboard */; };
+		8A46A24923DB1919000700AE /* TradeBitcoinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A46A24823DB1919000700AE /* TradeBitcoinTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8A46A24523DB1919000700AE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8A46A22623DB1917000700AE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8A46A22D23DB1917000700AE;
+			remoteInfo = TradeBitcoin;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8A1FBADC23DB24480070279F /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
+		8A46A22E23DB1917000700AE /* TradeBitcoin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TradeBitcoin.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A46A23123DB1917000700AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8A46A23323DB1917000700AE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		8A46A23523DB1917000700AE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8A46A23823DB1917000700AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8A46A23A23DB1919000700AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8A46A23D23DB1919000700AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8A46A23F23DB1919000700AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A46A24423DB1919000700AE /* TradeBitcoinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TradeBitcoinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A46A24823DB1919000700AE /* TradeBitcoinTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeBitcoinTests.swift; sourceTree = "<group>"; };
+		8A46A24A23DB1919000700AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8A46A22B23DB1917000700AE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A1FBADD23DB24480070279F /* SnapKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A46A24123DB1919000700AE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8A46A22523DB1917000700AE = {
+			isa = PBXGroup;
+			children = (
+				8A46A23023DB1917000700AE /* TradeBitcoin */,
+				8A46A24723DB1919000700AE /* TradeBitcoinTests */,
+				8A46A22F23DB1917000700AE /* Products */,
+				8A1FBADC23DB24480070279F /* SnapKit.framework */,
+			);
+			sourceTree = "<group>";
+		};
+		8A46A22F23DB1917000700AE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8A46A22E23DB1917000700AE /* TradeBitcoin.app */,
+				8A46A24423DB1919000700AE /* TradeBitcoinTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8A46A23023DB1917000700AE /* TradeBitcoin */ = {
+			isa = PBXGroup;
+			children = (
+				8A46A23123DB1917000700AE /* AppDelegate.swift */,
+				8A46A23323DB1917000700AE /* SceneDelegate.swift */,
+				8A46A23523DB1917000700AE /* ViewController.swift */,
+				8A46A23723DB1917000700AE /* Main.storyboard */,
+				8A46A23A23DB1919000700AE /* Assets.xcassets */,
+				8A46A23C23DB1919000700AE /* LaunchScreen.storyboard */,
+				8A46A23F23DB1919000700AE /* Info.plist */,
+			);
+			path = TradeBitcoin;
+			sourceTree = "<group>";
+		};
+		8A46A24723DB1919000700AE /* TradeBitcoinTests */ = {
+			isa = PBXGroup;
+			children = (
+				8A46A24823DB1919000700AE /* TradeBitcoinTests.swift */,
+				8A46A24A23DB1919000700AE /* Info.plist */,
+			);
+			path = TradeBitcoinTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8A46A22D23DB1917000700AE /* TradeBitcoin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A46A24D23DB1919000700AE /* Build configuration list for PBXNativeTarget "TradeBitcoin" */;
+			buildPhases = (
+				8A46A22A23DB1917000700AE /* Sources */,
+				8A46A22B23DB1917000700AE /* Frameworks */,
+				8A46A22C23DB1917000700AE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TradeBitcoin;
+			productName = TradeBitcoin;
+			productReference = 8A46A22E23DB1917000700AE /* TradeBitcoin.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8A46A24323DB1919000700AE /* TradeBitcoinTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A46A25023DB1919000700AE /* Build configuration list for PBXNativeTarget "TradeBitcoinTests" */;
+			buildPhases = (
+				8A46A24023DB1919000700AE /* Sources */,
+				8A46A24123DB1919000700AE /* Frameworks */,
+				8A46A24223DB1919000700AE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8A46A24623DB1919000700AE /* PBXTargetDependency */,
+			);
+			name = TradeBitcoinTests;
+			productName = TradeBitcoinTests;
+			productReference = 8A46A24423DB1919000700AE /* TradeBitcoinTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8A46A22623DB1917000700AE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Alexey Zhilnikov";
+				TargetAttributes = {
+					8A46A22D23DB1917000700AE = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					8A46A24323DB1919000700AE = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 8A46A22D23DB1917000700AE;
+					};
+				};
+			};
+			buildConfigurationList = 8A46A22923DB1917000700AE /* Build configuration list for PBXProject "TradeBitcoin" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8A46A22523DB1917000700AE;
+			productRefGroup = 8A46A22F23DB1917000700AE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8A46A22D23DB1917000700AE /* TradeBitcoin */,
+				8A46A24323DB1919000700AE /* TradeBitcoinTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8A46A22C23DB1917000700AE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A46A23E23DB1919000700AE /* LaunchScreen.storyboard in Resources */,
+				8A46A23B23DB1919000700AE /* Assets.xcassets in Resources */,
+				8A46A23923DB1917000700AE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A46A24223DB1919000700AE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8A46A22A23DB1917000700AE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A46A23623DB1917000700AE /* ViewController.swift in Sources */,
+				8A46A23223DB1917000700AE /* AppDelegate.swift in Sources */,
+				8A46A23423DB1917000700AE /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A46A24023DB1919000700AE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A46A24923DB1919000700AE /* TradeBitcoinTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8A46A24623DB1919000700AE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8A46A22D23DB1917000700AE /* TradeBitcoin */;
+			targetProxy = 8A46A24523DB1919000700AE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8A46A23723DB1917000700AE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8A46A23823DB1917000700AE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8A46A23C23DB1919000700AE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8A46A23D23DB1919000700AE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8A46A24B23DB1919000700AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8A46A24C23DB1919000700AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8A46A24E23DB1919000700AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = TradeBitcoin/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = az.com.TradeBitcoin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8A46A24F23DB1919000700AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = TradeBitcoin/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = az.com.TradeBitcoin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8A46A25123DB1919000700AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TradeBitcoinTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = az.com.TradeBitcoinTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TradeBitcoin.app/TradeBitcoin";
+			};
+			name = Debug;
+		};
+		8A46A25223DB1919000700AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TradeBitcoinTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = az.com.TradeBitcoinTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TradeBitcoin.app/TradeBitcoin";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8A46A22923DB1917000700AE /* Build configuration list for PBXProject "TradeBitcoin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A46A24B23DB1919000700AE /* Debug */,
+				8A46A24C23DB1919000700AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8A46A24D23DB1919000700AE /* Build configuration list for PBXNativeTarget "TradeBitcoin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A46A24E23DB1919000700AE /* Debug */,
+				8A46A24F23DB1919000700AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8A46A25023DB1919000700AE /* Build configuration list for PBXNativeTarget "TradeBitcoinTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A46A25123DB1919000700AE /* Debug */,
+				8A46A25223DB1919000700AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8A46A22623DB1917000700AE /* Project object */;
+}
