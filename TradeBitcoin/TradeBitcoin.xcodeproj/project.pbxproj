@@ -11,6 +11,9 @@
 		8A0F86B123DC59590024C807 /* TickerViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0F86B023DC59590024C807 /* TickerViewModelTests.swift */; };
 		8A0F86B423DC6BD30024C807 /* APIErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0F86B323DC6BD30024C807 /* APIErrors.swift */; };
 		8A0F86B623DC6F6B0024C807 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0F86B523DC6F6B0024C807 /* APIRequest.swift */; };
+		8A0F86B923DC91550024C807 /* TestsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0F86B823DC91550024C807 /* TestsHelper.swift */; };
+		8A0F86BC23DC92080024C807 /* Ticker.json in Resources */ = {isa = PBXBuildFile; fileRef = 8A0F86BB23DC92080024C807 /* Ticker.json */; };
+		8A0F86BE23DC93A40024C807 /* PriceParsingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0F86BD23DC93A40024C807 /* PriceParsingTests.swift */; };
 		8A2BB25D23DBEC4100D07F49 /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2BB25C23DBEC4100D07F49 /* Price.swift */; };
 		8A46A23223DB1917000700AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A46A23123DB1917000700AE /* AppDelegate.swift */; };
 		8A46A23423DB1917000700AE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A46A23323DB1917000700AE /* SceneDelegate.swift */; };
@@ -50,6 +53,9 @@
 		8A0F86B023DC59590024C807 /* TickerViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerViewModelTests.swift; sourceTree = "<group>"; };
 		8A0F86B323DC6BD30024C807 /* APIErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIErrors.swift; sourceTree = "<group>"; };
 		8A0F86B523DC6F6B0024C807 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		8A0F86B823DC91550024C807 /* TestsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestsHelper.swift; sourceTree = "<group>"; };
+		8A0F86BB23DC92080024C807 /* Ticker.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Ticker.json; path = ../../../../../Desktop/Ticker.json; sourceTree = "<group>"; };
+		8A0F86BD23DC93A40024C807 /* PriceParsingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceParsingTests.swift; sourceTree = "<group>"; };
 		8A1FBADC23DB24480070279F /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		8A2BB25C23DBEC4100D07F49 /* Price.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Price.swift; sourceTree = "<group>"; };
 		8A46A22E23DB1917000700AE /* TradeBitcoin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TradeBitcoin.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,6 +97,22 @@
 			path = API;
 			sourceTree = "<group>";
 		};
+		8A0F86B723DC913A0024C807 /* TestsHelper */ = {
+			isa = PBXGroup;
+			children = (
+				8A0F86B823DC91550024C807 /* TestsHelper.swift */,
+			);
+			path = TestsHelper;
+			sourceTree = "<group>";
+		};
+		8A0F86BA23DC917D0024C807 /* TestsData */ = {
+			isa = PBXGroup;
+			children = (
+				8A0F86BB23DC92080024C807 /* Ticker.json */,
+			);
+			path = TestsData;
+			sourceTree = "<group>";
+		};
 		8A46A22523DB1917000700AE = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +151,9 @@
 		8A46A24723DB1919000700AE /* TradeBitcoinTests */ = {
 			isa = PBXGroup;
 			children = (
+				8A0F86BA23DC917D0024C807 /* TestsData */,
+				8A0F86B723DC913A0024C807 /* TestsHelper */,
+				8A0F86BD23DC93A40024C807 /* PriceParsingTests.swift */,
 				8A0F86B023DC59590024C807 /* TickerViewModelTests.swift */,
 				8A46A24A23DB1919000700AE /* Info.plist */,
 			);
@@ -226,6 +251,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A0F86BC23DC92080024C807 /* Ticker.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,7 +276,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A0F86BE23DC93A40024C807 /* PriceParsingTests.swift in Sources */,
 				8A0F86B123DC59590024C807 /* TickerViewModelTests.swift in Sources */,
+				8A0F86B923DC91550024C807 /* TestsHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
