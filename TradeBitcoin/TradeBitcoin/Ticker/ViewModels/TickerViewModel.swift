@@ -10,7 +10,7 @@ import Foundation
 
 typealias TickerPrice = [String: Price]
 
-class TickerViewModel {
+final class TickerViewModel {
   
   private let localeIdentifier: String
   private let request: APIRequest
@@ -47,14 +47,16 @@ class TickerViewModel {
     request.delegate = self
     request.fetch()
     
-    timer = Timer.scheduledTimer(withTimeInterval: pollingInterval, repeats: true) { _ in
-      self.request.fetch()
+    timer = Timer.scheduledTimer(withTimeInterval: pollingInterval, repeats: true) { [weak self] _ in
+      self?.request.fetch()
     }
   }
   
   func viewWillDisappear() {
     timer?.invalidate()
   }
+  
+  // MARK: - Private methods
   
   private func decodeTickers(_ data: Data) -> TickerPrice? {
     let decoder = JSONDecoder()

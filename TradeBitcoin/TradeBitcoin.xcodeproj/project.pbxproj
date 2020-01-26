@@ -12,16 +12,21 @@
 		8A0F86B423DC6BD30024C807 /* APIErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0F86B323DC6BD30024C807 /* APIErrors.swift */; };
 		8A0F86B623DC6F6B0024C807 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0F86B523DC6F6B0024C807 /* APIRequest.swift */; };
 		8A0F86B923DC91550024C807 /* TestsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0F86B823DC91550024C807 /* TestsHelper.swift */; };
-		8A0F86BC23DC92080024C807 /* Ticker.json in Resources */ = {isa = PBXBuildFile; fileRef = 8A0F86BB23DC92080024C807 /* Ticker.json */; };
 		8A0F86BE23DC93A40024C807 /* PriceParsingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0F86BD23DC93A40024C807 /* PriceParsingTests.swift */; };
 		8A2BB25D23DBEC4100D07F49 /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2BB25C23DBEC4100D07F49 /* Price.swift */; };
 		8A46A23223DB1917000700AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A46A23123DB1917000700AE /* AppDelegate.swift */; };
 		8A46A23423DB1917000700AE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A46A23323DB1917000700AE /* SceneDelegate.swift */; };
-		8A46A23B23DB1919000700AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A46A23A23DB1919000700AE /* Assets.xcassets */; };
 		8A5DCF8923DB2AE600B0BC1D /* TickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5DCF8823DB2AE600B0BC1D /* TickerViewController.swift */; };
-		8A5DCF8B23DB2FE500B0BC1D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A5DCF8A23DB2FE500B0BC1D /* Default-568h@2x.png */; };
 		8A5DCF8C23DB311C00B0BC1D /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A1FBADC23DB24480070279F /* SnapKit.framework */; };
 		8A5DCF8D23DB311C00B0BC1D /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8A1FBADC23DB24480070279F /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8AB7BEB423DD23DA00C242A9 /* Ticker.json in Resources */ = {isa = PBXBuildFile; fileRef = 8AB7BEB323DD23DA00C242A9 /* Ticker.json */; };
+		8ABF981D23DD46A70086E997 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABF981C23DD46A70086E997 /* UILabelExtension.swift */; };
+		8ABF981F23DD4B860086E997 /* BuyPriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABF981E23DD4B860086E997 /* BuyPriceView.swift */; };
+		8ABF982123DD4C810086E997 /* PriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABF982023DD4C810086E997 /* PriceView.swift */; };
+		8ABF982B23DD9E1A0086E997 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABF982A23DD9E1A0086E997 /* UIColorExtension.swift */; };
+		8ABF983323DDAA4C0086E997 /* UIFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABF983223DDAA4C0086E997 /* UIFontExtension.swift */; };
+		8AECB24123DD24AB00B60D17 /* SellPriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AECB24023DD24AB00B60D17 /* SellPriceView.swift */; };
+		8AECB24323DD2FAA00B60D17 /* UpdatePrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AECB24223DD2FAA00B60D17 /* UpdatePrice.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,19 +59,26 @@
 		8A0F86B323DC6BD30024C807 /* APIErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIErrors.swift; sourceTree = "<group>"; };
 		8A0F86B523DC6F6B0024C807 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		8A0F86B823DC91550024C807 /* TestsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestsHelper.swift; sourceTree = "<group>"; };
-		8A0F86BB23DC92080024C807 /* Ticker.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Ticker.json; path = ../../../../../Desktop/Ticker.json; sourceTree = "<group>"; };
 		8A0F86BD23DC93A40024C807 /* PriceParsingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceParsingTests.swift; sourceTree = "<group>"; };
 		8A1FBADC23DB24480070279F /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		8A2BB25C23DBEC4100D07F49 /* Price.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Price.swift; sourceTree = "<group>"; };
 		8A46A22E23DB1917000700AE /* TradeBitcoin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TradeBitcoin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A46A23123DB1917000700AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8A46A23323DB1917000700AE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8A46A23A23DB1919000700AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8A46A23F23DB1919000700AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A46A24423DB1919000700AE /* TradeBitcoinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TradeBitcoinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A46A24A23DB1919000700AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A5DCF8823DB2AE600B0BC1D /* TickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerViewController.swift; sourceTree = "<group>"; };
-		8A5DCF8A23DB2FE500B0BC1D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		8AB7BEB323DD23DA00C242A9 /* Ticker.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Ticker.json; sourceTree = "<group>"; };
+		8ABF981C23DD46A70086E997 /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
+		8ABF981E23DD4B860086E997 /* BuyPriceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyPriceView.swift; sourceTree = "<group>"; };
+		8ABF982023DD4C810086E997 /* PriceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceView.swift; sourceTree = "<group>"; };
+		8ABF982623DD9C230086E997 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8ABF982723DD9C230086E997 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8ABF982823DD9C230086E997 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8ABF982A23DD9E1A0086E997 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		8ABF983223DDAA4C0086E997 /* UIFontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtension.swift; sourceTree = "<group>"; };
+		8AECB24023DD24AB00B60D17 /* SellPriceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellPriceView.swift; sourceTree = "<group>"; };
+		8AECB24223DD2FAA00B60D17 /* UpdatePrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePrice.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,7 +120,7 @@
 		8A0F86BA23DC917D0024C807 /* TestsData */ = {
 			isa = PBXGroup;
 			children = (
-				8A0F86BB23DC92080024C807 /* Ticker.json */,
+				8AB7BEB323DD23DA00C242A9 /* Ticker.json */,
 			);
 			path = TestsData;
 			sourceTree = "<group>";
@@ -116,8 +128,8 @@
 		8A46A22523DB1917000700AE = {
 			isa = PBXGroup;
 			children = (
-				8A5DCF8A23DB2FE500B0BC1D /* Default-568h@2x.png */,
 				8A46A23023DB1917000700AE /* TradeBitcoin */,
+				8ABF982523DD9C230086E997 /* SupportingFiles */,
 				8A46A24723DB1919000700AE /* TradeBitcoinTests */,
 				8A46A22F23DB1917000700AE /* Products */,
 				8A1FBADC23DB24480070279F /* SnapKit.framework */,
@@ -136,14 +148,12 @@
 		8A46A23023DB1917000700AE /* TradeBitcoin */ = {
 			isa = PBXGroup;
 			children = (
-				8A0F86B223DC6BB50024C807 /* API */,
 				8A46A23123DB1917000700AE /* AppDelegate.swift */,
 				8A46A23323DB1917000700AE /* SceneDelegate.swift */,
-				8A2BB25C23DBEC4100D07F49 /* Price.swift */,
-				8A5DCF8823DB2AE600B0BC1D /* TickerViewController.swift */,
-				8A0F86AE23DC54460024C807 /* TickerViewModel.swift */,
-				8A46A23A23DB1919000700AE /* Assets.xcassets */,
-				8A46A23F23DB1919000700AE /* Info.plist */,
+				8A0F86B223DC6BB50024C807 /* API */,
+				8ABF982923DD9DF10086E997 /* Extensions */,
+				8ABF982C23DDA17B0086E997 /* Price */,
+				8ABF982F23DDA1CD0086E997 /* Ticker */,
 			);
 			path = TradeBitcoin;
 			sourceTree = "<group>";
@@ -158,6 +168,80 @@
 				8A46A24A23DB1919000700AE /* Info.plist */,
 			);
 			path = TradeBitcoinTests;
+			sourceTree = "<group>";
+		};
+		8ABF982523DD9C230086E997 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				8ABF982723DD9C230086E997 /* Assets.xcassets */,
+				8ABF982823DD9C230086E997 /* Info.plist */,
+				8ABF982623DD9C230086E997 /* LaunchScreen.storyboard */,
+			);
+			name = SupportingFiles;
+			path = TradeBitcoin/SupportingFiles;
+			sourceTree = "<group>";
+		};
+		8ABF982923DD9DF10086E997 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8ABF982A23DD9E1A0086E997 /* UIColorExtension.swift */,
+				8ABF983223DDAA4C0086E997 /* UIFontExtension.swift */,
+				8ABF981C23DD46A70086E997 /* UILabelExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8ABF982C23DDA17B0086E997 /* Price */ = {
+			isa = PBXGroup;
+			children = (
+				8ABF982E23DDA18B0086E997 /* Models */,
+				8ABF982D23DDA1840086E997 /* Views */,
+				8AECB24223DD2FAA00B60D17 /* UpdatePrice.swift */,
+			);
+			path = Price;
+			sourceTree = "<group>";
+		};
+		8ABF982D23DDA1840086E997 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8ABF981E23DD4B860086E997 /* BuyPriceView.swift */,
+				8ABF982023DD4C810086E997 /* PriceView.swift */,
+				8AECB24023DD24AB00B60D17 /* SellPriceView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8ABF982E23DDA18B0086E997 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8A2BB25C23DBEC4100D07F49 /* Price.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8ABF982F23DDA1CD0086E997 /* Ticker */ = {
+			isa = PBXGroup;
+			children = (
+				8ABF983123DDA1E50086E997 /* ViewControllers */,
+				8ABF983023DDA1DA0086E997 /* ViewModels */,
+			);
+			path = Ticker;
+			sourceTree = "<group>";
+		};
+		8ABF983023DDA1DA0086E997 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				8A0F86AE23DC54460024C807 /* TickerViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		8ABF983123DDA1E50086E997 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8A5DCF8823DB2AE600B0BC1D /* TickerViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,8 +326,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A46A23B23DB1919000700AE /* Assets.xcassets in Resources */,
-				8A5DCF8B23DB2FE500B0BC1D /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,7 +333,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A0F86BC23DC92080024C807 /* Ticker.json in Resources */,
+				8AB7BEB423DD23DA00C242A9 /* Ticker.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,11 +345,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A2BB25D23DBEC4100D07F49 /* Price.swift in Sources */,
+				8ABF981D23DD46A70086E997 /* UILabelExtension.swift in Sources */,
+				8ABF982B23DD9E1A0086E997 /* UIColorExtension.swift in Sources */,
 				8A0F86B623DC6F6B0024C807 /* APIRequest.swift in Sources */,
 				8A46A23223DB1917000700AE /* AppDelegate.swift in Sources */,
 				8A46A23423DB1917000700AE /* SceneDelegate.swift in Sources */,
+				8AECB24123DD24AB00B60D17 /* SellPriceView.swift in Sources */,
 				8A0F86AF23DC54460024C807 /* TickerViewModel.swift in Sources */,
 				8A5DCF8923DB2AE600B0BC1D /* TickerViewController.swift in Sources */,
+				8ABF982123DD4C810086E997 /* PriceView.swift in Sources */,
+				8AECB24323DD2FAA00B60D17 /* UpdatePrice.swift in Sources */,
+				8ABF983323DDAA4C0086E997 /* UIFontExtension.swift in Sources */,
+				8ABF981F23DD4B860086E997 /* BuyPriceView.swift in Sources */,
 				8A0F86B423DC6BD30024C807 /* APIErrors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -418,7 +507,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = TradeBitcoin/Info.plist;
+				INFOPLIST_FILE = TradeBitcoin/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -442,7 +531,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = TradeBitcoin/Info.plist;
+				INFOPLIST_FILE = TradeBitcoin/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
