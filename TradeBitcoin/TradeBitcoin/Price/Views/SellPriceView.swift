@@ -43,7 +43,7 @@ final class SellPriceView: UIView {
   private func configureTitleLabel() {
     titleLabel.textAlignment = .left
     titleLabel.textColor = .sellTitle
-    titleLabel.font = .systemFont(ofSize: 12)
+    titleLabel.font = .priceTitle
     titleLabel.text = "SELL"
     titleLabel.setContentHuggingPriority(.required, for: .vertical)
   }
@@ -59,7 +59,7 @@ final class SellPriceView: UIView {
   private func configureLowestPriceLabel() {
     lowestPriceLabel.textAlignment = .left
     lowestPriceLabel.textColor = .gray
-    lowestPriceLabel.font = .systemFont(ofSize: 13)
+    lowestPriceLabel.font = .lowestHighestPriceTitle
     lowestPriceLabel.text = lowestPriceTitle
     lowestPriceLabel.setContentHuggingPriority(.required, for: .vertical)
   }
@@ -72,18 +72,20 @@ final class SellPriceView: UIView {
   }
   
   private func configureLayoutConstraints() {
+    layoutMargins = UIEdgeInsets(top: 4, left: 4, bottom: 4, right: 0)
+    
     titleLabel.snp.makeConstraints { make in
-      make.leading.top.trailing.equalToSuperview()
+      make.leading.top.trailing.equalTo(layoutMarginsGuide)
     }
     
     priceLabel.snp.makeConstraints { make in
-      make.leading.trailing.equalToSuperview()
+      make.leading.trailing.equalTo(layoutMarginsGuide)
       make.top.equalTo(titleLabel.snp.bottom)
     }
     
     lowestPriceLabel.snp.makeConstraints { make in
       make.top.equalTo(priceLabel.snp.bottom)
-      make.leading.bottom.trailing.equalToSuperview()
+      make.leading.bottom.trailing.equalTo(layoutMarginsGuide)
     }
   }
 }

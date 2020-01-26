@@ -13,6 +13,7 @@ final class TickerViewController: UIViewController {
   
   private let viewModel: TickerViewModel
   private let priceView = PriceView()
+  private let spreadLabel = UILabel()
   
   init(viewModel: TickerViewModel) {
     self.viewModel = viewModel
@@ -27,6 +28,7 @@ final class TickerViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    configureSpreadLabel()
     configureView()
     configureLayoutConstraints()
   }
@@ -43,15 +45,27 @@ final class TickerViewController: UIViewController {
   
   // MARK: - Private methods
   
+  private func configureSpreadLabel() {
+    spreadLabel.textAlignment = .center
+    spreadLabel.textColor = .white
+    spreadLabel.font = .spread
+  }
+  
   private func configureView() {
     view.backgroundColor = .background
     view.addSubview(priceView)
+    priceView.addSubview(spreadLabel)
   }
   
   private func configureLayoutConstraints() {
     priceView.snp.makeConstraints { make in
       make.top.leading.trailing.equalTo(view.safeAreaLayoutGuide)
       make.height.equalTo(100)
+    }
+    
+    spreadLabel.snp.makeConstraints { make in
+      make.centerX.equalToSuperview()
+      make.bottom.equalToSuperview().inset(4)
     }
   }
 }
@@ -67,6 +81,7 @@ extension TickerViewController: TickerViewModelDelegate {
   }
   
   func didUpdateSpread(_ spread: String) {
+    spreadLabel.text = spread
   }
   
   func didUpdateLowestPrice(_ price: String) {
