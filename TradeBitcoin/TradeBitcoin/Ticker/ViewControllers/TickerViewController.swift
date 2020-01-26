@@ -14,6 +14,7 @@ final class TickerViewController: UIViewController {
   private let viewModel: TickerViewModel
   private let priceView = PriceView()
   private let spreadLabel = UILabel()
+  private let confirmOrderView = ConfirmOrderView()
   
   init(viewModel: TickerViewModel) {
     self.viewModel = viewModel
@@ -29,6 +30,7 @@ final class TickerViewController: UIViewController {
     super.viewDidLoad()
     
     configureSpreadLabel()
+    configureConfirmOrderView()
     configureView()
     configureLayoutConstraints()
   }
@@ -51,21 +53,30 @@ final class TickerViewController: UIViewController {
     spreadLabel.font = .spread
   }
   
+  private func configureConfirmOrderView() {
+    confirmOrderView.delegate = viewModel
+  }
+  
   private func configureView() {
     view.backgroundColor = .background
     view.addSubview(priceView)
     priceView.addSubview(spreadLabel)
+    view.addSubview(confirmOrderView)
   }
   
   private func configureLayoutConstraints() {
     priceView.snp.makeConstraints { make in
-      make.top.leading.trailing.equalTo(view.safeAreaLayoutGuide)
+      make.leading.top.trailing.equalTo(view.safeAreaLayoutGuide)
       make.height.equalTo(100)
     }
     
     spreadLabel.snp.makeConstraints { make in
       make.centerX.equalToSuperview()
       make.bottom.equalToSuperview().inset(4)
+    }
+    
+    confirmOrderView.snp.makeConstraints { make in
+      make.leading.bottom.trailing.equalTo(view.safeAreaLayoutGuide)
     }
   }
 }

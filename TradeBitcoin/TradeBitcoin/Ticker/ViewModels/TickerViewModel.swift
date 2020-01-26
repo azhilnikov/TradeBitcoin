@@ -155,3 +155,12 @@ extension TickerViewModel: APIRequestDelegate {
     }
   }
 }
+
+extension TickerViewModel: ConfirmOrderViewDelegate {
+  
+  func didTapCancelButton() {
+  }
+  
+  func didTapConfirmButton() {
+  }
+}

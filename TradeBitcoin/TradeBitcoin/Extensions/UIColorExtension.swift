@@ -18,4 +18,6 @@ extension UIColor {
   static let defaultPrice = UIColor.white
   static let downPrice = UIColor.red
   static let upPrice = UIColor.green
+  static let cancelBackground = UIColor(red: 76.0 / 255, green: 77.0 / 255, blue: 78.0 / 255, alpha: 1)
+  static let confirmBackground = UIColor(red: 27.0 / 255, green: 142.0 / 255, blue: 154.0 / 255, alpha: 1)
 }
