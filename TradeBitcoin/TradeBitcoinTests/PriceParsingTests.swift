@@ -11,13 +11,13 @@ import XCTest
 
 class PriceParsingTests: XCTestCase {
 
-  private let jsonData = TestsHelper.loadJSON(from: "Ticker")!
+  private let data = TestsHelper.loadData(from: "Ticker")!
   private let decoder = JSONDecoder()
   private var sut: TickerPrice!
   
   override func setUp() {
     super.setUp()
-    sut = try! decoder.decode(TickerPrice.self, from: jsonData)
+    sut = try! decoder.decode(TickerPrice.self, from: data)
   }
 
   override func tearDown() {

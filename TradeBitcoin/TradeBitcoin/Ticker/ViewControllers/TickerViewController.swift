@@ -17,6 +17,7 @@ final class TickerViewController: UIViewController {
   init(viewModel: TickerViewModel) {
     self.viewModel = viewModel
     super.init(nibName: nil, bundle: nil)
+    self.viewModel.delegate = self
   }
   
   required init?(coder: NSCoder) {
@@ -52,5 +53,27 @@ final class TickerViewController: UIViewController {
       make.top.leading.trailing.equalTo(view.safeAreaLayoutGuide)
       make.height.equalTo(100)
     }
+  }
+}
+
+extension TickerViewController: TickerViewModelDelegate {
+  
+  func didUpdateSellPrice(_ price: String, direction: PriceDirection) {
+    priceView.sellPriceView.updatePrice(price, direction: direction)
+  }
+  
+  func didUpdateBuyPrice(_ price: String, direction: PriceDirection) {
+    priceView.buyPriceView.updatePrice(price, direction: direction)
+  }
+  
+  func didUpdateSpread(_ spread: String) {
+  }
+  
+  func didUpdateLowestPrice(_ price: String) {
+    priceView.sellPriceView.updateLowestPrice(price)
+  }
+  
+  func didUpdateHighestPrice(_ price: String) {
+    priceView.buyPriceView.updateHighestPrice(price)
   }
 }

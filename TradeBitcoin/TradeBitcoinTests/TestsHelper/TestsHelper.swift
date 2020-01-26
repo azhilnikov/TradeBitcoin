@@ -10,7 +10,7 @@ import Foundation
 
 class TestsHelper {
   
-  class func loadJSON(from fileName: String) -> Data? {
+  class func loadData(from fileName: String) -> Data? {
     guard let url = Bundle(for: TestsHelper.self).url(forResource: fileName, withExtension: "json") else {
       return nil
     }

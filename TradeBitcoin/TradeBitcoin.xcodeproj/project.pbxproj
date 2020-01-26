@@ -16,6 +16,11 @@
 		8A2BB25D23DBEC4100D07F49 /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2BB25C23DBEC4100D07F49 /* Price.swift */; };
 		8A46A23223DB1917000700AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A46A23123DB1917000700AE /* AppDelegate.swift */; };
 		8A46A23423DB1917000700AE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A46A23323DB1917000700AE /* SceneDelegate.swift */; };
+		8A58878823DDD7CD008E2B4E /* EqualPrice.json in Resources */ = {isa = PBXBuildFile; fileRef = 8A58878723DDD7CD008E2B4E /* EqualPrice.json */; };
+		8A58878A23DDD883008E2B4E /* SellPriceHigherThanLast.json in Resources */ = {isa = PBXBuildFile; fileRef = 8A58878923DDD883008E2B4E /* SellPriceHigherThanLast.json */; };
+		8A58878C23DDD937008E2B4E /* BuyPriceHigherThanLast.json in Resources */ = {isa = PBXBuildFile; fileRef = 8A58878B23DDD937008E2B4E /* BuyPriceHigherThanLast.json */; };
+		8A58878E23DDDA4B008E2B4E /* NegativeSpread.json in Resources */ = {isa = PBXBuildFile; fileRef = 8A58878D23DDDA4B008E2B4E /* NegativeSpread.json */; };
+		8A58879023DDDB37008E2B4E /* LowestHighestPrice.json in Resources */ = {isa = PBXBuildFile; fileRef = 8A58878F23DDDB37008E2B4E /* LowestHighestPrice.json */; };
 		8A5DCF8923DB2AE600B0BC1D /* TickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5DCF8823DB2AE600B0BC1D /* TickerViewController.swift */; };
 		8A5DCF8C23DB311C00B0BC1D /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A1FBADC23DB24480070279F /* SnapKit.framework */; };
 		8A5DCF8D23DB311C00B0BC1D /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8A1FBADC23DB24480070279F /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -26,7 +31,7 @@
 		8ABF982B23DD9E1A0086E997 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABF982A23DD9E1A0086E997 /* UIColorExtension.swift */; };
 		8ABF983323DDAA4C0086E997 /* UIFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABF983223DDAA4C0086E997 /* UIFontExtension.swift */; };
 		8AECB24123DD24AB00B60D17 /* SellPriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AECB24023DD24AB00B60D17 /* SellPriceView.swift */; };
-		8AECB24323DD2FAA00B60D17 /* UpdatePrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AECB24223DD2FAA00B60D17 /* UpdatePrice.swift */; };
+		8AECB24323DD2FAA00B60D17 /* PriceDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AECB24223DD2FAA00B60D17 /* PriceDirection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +72,11 @@
 		8A46A23323DB1917000700AE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8A46A24423DB1919000700AE /* TradeBitcoinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TradeBitcoinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A46A24A23DB1919000700AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A58878723DDD7CD008E2B4E /* EqualPrice.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = EqualPrice.json; sourceTree = "<group>"; };
+		8A58878923DDD883008E2B4E /* SellPriceHigherThanLast.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SellPriceHigherThanLast.json; sourceTree = "<group>"; };
+		8A58878B23DDD937008E2B4E /* BuyPriceHigherThanLast.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BuyPriceHigherThanLast.json; sourceTree = "<group>"; };
+		8A58878D23DDDA4B008E2B4E /* NegativeSpread.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = NegativeSpread.json; sourceTree = "<group>"; };
+		8A58878F23DDDB37008E2B4E /* LowestHighestPrice.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = LowestHighestPrice.json; sourceTree = "<group>"; };
 		8A5DCF8823DB2AE600B0BC1D /* TickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerViewController.swift; sourceTree = "<group>"; };
 		8AB7BEB323DD23DA00C242A9 /* Ticker.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Ticker.json; sourceTree = "<group>"; };
 		8ABF981C23DD46A70086E997 /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
@@ -78,7 +88,7 @@
 		8ABF982A23DD9E1A0086E997 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		8ABF983223DDAA4C0086E997 /* UIFontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtension.swift; sourceTree = "<group>"; };
 		8AECB24023DD24AB00B60D17 /* SellPriceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellPriceView.swift; sourceTree = "<group>"; };
-		8AECB24223DD2FAA00B60D17 /* UpdatePrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePrice.swift; sourceTree = "<group>"; };
+		8AECB24223DD2FAA00B60D17 /* PriceDirection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceDirection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +131,11 @@
 			isa = PBXGroup;
 			children = (
 				8AB7BEB323DD23DA00C242A9 /* Ticker.json */,
+				8A58878B23DDD937008E2B4E /* BuyPriceHigherThanLast.json */,
+				8A58878723DDD7CD008E2B4E /* EqualPrice.json */,
+				8A58878F23DDDB37008E2B4E /* LowestHighestPrice.json */,
+				8A58878D23DDDA4B008E2B4E /* NegativeSpread.json */,
+				8A58878923DDD883008E2B4E /* SellPriceHigherThanLast.json */,
 			);
 			path = TestsData;
 			sourceTree = "<group>";
@@ -196,7 +211,6 @@
 			children = (
 				8ABF982E23DDA18B0086E997 /* Models */,
 				8ABF982D23DDA1840086E997 /* Views */,
-				8AECB24223DD2FAA00B60D17 /* UpdatePrice.swift */,
 			);
 			path = Price;
 			sourceTree = "<group>";
@@ -215,6 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				8A2BB25C23DBEC4100D07F49 /* Price.swift */,
+				8AECB24223DD2FAA00B60D17 /* PriceDirection.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -333,7 +348,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A58878C23DDD937008E2B4E /* BuyPriceHigherThanLast.json in Resources */,
+				8A58878A23DDD883008E2B4E /* SellPriceHigherThanLast.json in Resources */,
+				8A58878823DDD7CD008E2B4E /* EqualPrice.json in Resources */,
 				8AB7BEB423DD23DA00C242A9 /* Ticker.json in Resources */,
+				8A58879023DDDB37008E2B4E /* LowestHighestPrice.json in Resources */,
+				8A58878E23DDDA4B008E2B4E /* NegativeSpread.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,7 +374,7 @@
 				8A0F86AF23DC54460024C807 /* TickerViewModel.swift in Sources */,
 				8A5DCF8923DB2AE600B0BC1D /* TickerViewController.swift in Sources */,
 				8ABF982123DD4C810086E997 /* PriceView.swift in Sources */,
-				8AECB24323DD2FAA00B60D17 /* UpdatePrice.swift in Sources */,
+				8AECB24323DD2FAA00B60D17 /* PriceDirection.swift in Sources */,
 				8ABF983323DDAA4C0086E997 /* UIFontExtension.swift in Sources */,
 				8ABF981F23DD4B860086E997 /* BuyPriceView.swift in Sources */,
 				8A0F86B423DC6BD30024C807 /* APIErrors.swift in Sources */,

@@ -1,5 +1,5 @@
 //
-//  UpdatePrice.swift
+//  PriceDirection.swift
 //  TradeBitcoin
 //
 //  Created by Alexey on 26/1/20.
@@ -8,11 +8,8 @@
 
 import Foundation
 
-enum UpdatePriceDirection {
+enum PriceDirection {
+  case same
   case up
   case down
-}
-
-protocol UpdatePrice {
-  func updatePrice(_ price: String, direction: UpdatePriceDirection)
 }

@@ -10,8 +10,8 @@ import UIKit
 
 final class PriceView: UIStackView {
   
-  private let sellPriceView = SellPriceView()
-  private let buyPriceView = BuyPriceView()
+  let sellPriceView = SellPriceView()
+  let buyPriceView = BuyPriceView()
   
   override init(frame: CGRect) {
     super.init(frame: frame)
@@ -22,14 +22,6 @@ final class PriceView: UIStackView {
   
   required init(coder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
-  }
-  
-  func updateSellPrice(_ price: String, direction: UpdatePriceDirection) {
-    sellPriceView.updatePrice(price, direction: direction)
-  }
-  
-  func updateBuyPrice(_ price: String, direction: UpdatePriceDirection) {
-    buyPriceView.updatePrice(price, direction: direction)
   }
   
   // MARK: - Private methods

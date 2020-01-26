@@ -10,7 +10,7 @@ import UIKit
 
 extension UILabel {
   
-  func updatePrice(_ price: String, direction: UpdatePriceDirection) {
+  func updatePrice(_ price: String, direction: PriceDirection) {
     let attributedString = NSMutableAttributedString(string: price)
     
     let dotRange = (price as NSString).range(of: ".")
@@ -22,6 +22,9 @@ extension UILabel {
     attributedText = attributedString
     
     switch direction {
+    case .same:
+      break
+      
     case .up:
       highlightPrice(color: .upPrice)
       

@@ -10,18 +10,47 @@ import Foundation
 
 typealias TickerPrice = [String: Price]
 
+protocol TickerViewModelDelegate: class {
+  func didUpdateSellPrice(_ price: String, direction: PriceDirection)
+  func didUpdateBuyPrice(_ price: String, direction: PriceDirection)
+  func didUpdateSpread(_ spread: String)
+  func didUpdateLowestPrice(_ price: String)
+  func didUpdateHighestPrice(_ price: String)
+}
+
 final class TickerViewModel {
+  
+  weak var delegate: TickerViewModelDelegate?
+  private(set) var currencySymbol: String?
   
   private let localeIdentifier: String
   private let request: APIRequest
   private let pollingInterval: TimeInterval = 15
   
-  private(set) var currencySymbol: String?
-  
   private var tickers: TickerPrice = [:] {
     didSet {
       guard let price = tickers[numberFormatter.currencyCode] else {
         return
+      }
+      
+      processSellPrice(price)
+      processBuyPrice(price)
+      processSpread(price)
+    }
+  }
+  
+  private var lowestSellPrice: Decimal? {
+    didSet {
+      if let lowestPrice = lowestSellPrice, let stringPrice = numberFormatter.string(from: lowestPrice as NSDecimalNumber) {
+        delegate?.didUpdateLowestPrice(stringPrice)
+      }
+    }
+  }
+  
+  private var highestBuyPrice: Decimal? {
+    didSet {
+      if let highestPrice = highestBuyPrice, let stringPrice = numberFormatter.string(from: highestPrice as NSDecimalNumber) {
+        delegate?.didUpdateHighestPrice(stringPrice)
       }
     }
   }
@@ -66,6 +95,50 @@ final class TickerViewModel {
     
     return tickers
   }
+  
+  private func processSellPrice(_ price: Price) {
+    if let sellPrice = numberFormatter.string(from: price.sell as NSDecimalNumber) {
+      delegate?.didUpdateSellPrice(sellPrice,
+                                   direction: priceDirection(currentPrice: price.sell, lastPrice: price.last))
+    }
+    
+    if let lowestPrice = lowestSellPrice {
+      if price.sell < lowestPrice {
+        lowestSellPrice = price.sell
+      }
+    } else {
+      lowestSellPrice = price.sell
+    }
+  }
+  
+  private func processBuyPrice(_ price: Price) {
+    if let buyPrice = numberFormatter.string(from: price.buy as NSDecimalNumber) {
+      delegate?.didUpdateBuyPrice(buyPrice,
+                                   direction: priceDirection(currentPrice: price.buy, lastPrice: price.last))
+    }
+    
+    if let highestPrice = highestBuyPrice {
+      if price.buy > highestPrice {
+        highestBuyPrice = price.buy
+      }
+    } else {
+      highestBuyPrice = price.buy
+    }
+  }
+  
+  private func processSpread(_ price: Price) {
+    if let spread = numberFormatter.string(from: (price.buy - price.sell) as NSDecimalNumber) {
+      delegate?.didUpdateSpread(spread)
+    }
+  }
+  
+  private func priceDirection(currentPrice: Decimal, lastPrice: Decimal) -> PriceDirection {
+    if currentPrice == lastPrice {
+      return .same
+    }
+    
+    return currentPrice > lastPrice ? .up : .down
+  }
 }
 
 extension TickerViewModel: APIRequestDelegate {
@@ -77,7 +150,7 @@ extension TickerViewModel: APIRequestDelegate {
         self.tickers = tickers
       }
       
-    case .failure(let error):
+    case .failure:
       break
     }
   }

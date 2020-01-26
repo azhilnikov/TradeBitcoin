@@ -30,6 +30,14 @@ final class SellPriceView: UIView {
     fatalError("init(coder:) has not been implemented")
   }
   
+  func updatePrice(_ price: String, direction: PriceDirection) {
+    priceLabel.updatePrice(price, direction: direction)
+  }
+  
+  func updateLowestPrice(_ price: String) {
+    lowestPriceLabel.text = "\(lowestPriceTitle) \(price)"
+  }
+  
   // MARK: - Private methods
   
   private func configureTitleLabel() {
@@ -77,12 +85,5 @@ final class SellPriceView: UIView {
       make.top.equalTo(priceLabel.snp.bottom)
       make.leading.bottom.trailing.equalToSuperview()
     }
-  }
-}
-
-extension SellPriceView: UpdatePrice {
-  
-  func updatePrice(_ price: String, direction: UpdatePriceDirection) {
-    priceLabel.updatePrice(price, direction: direction)
   }
 }
