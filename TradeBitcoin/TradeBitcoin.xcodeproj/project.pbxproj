@@ -22,6 +22,9 @@
 		8A58878E23DDDA4B008E2B4E /* NegativeSpread.json in Resources */ = {isa = PBXBuildFile; fileRef = 8A58878D23DDDA4B008E2B4E /* NegativeSpread.json */; };
 		8A58879023DDDB37008E2B4E /* LowestHighestPrice.json in Resources */ = {isa = PBXBuildFile; fileRef = 8A58878F23DDDB37008E2B4E /* LowestHighestPrice.json */; };
 		8A58879323DDE68F008E2B4E /* ConfirmOrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A58879223DDE68F008E2B4E /* ConfirmOrderView.swift */; };
+		8A5D5C9723DE6058000F45EC /* InputOrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5D5C9623DE6058000F45EC /* InputOrderView.swift */; };
+		8A5D5C9923DE7112000F45EC /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5D5C9823DE7112000F45EC /* OrderView.swift */; };
+		8A5D5C9B23DE86E4000F45EC /* OrderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5D5C9A23DE86E4000F45EC /* OrderTextField.swift */; };
 		8A5DCF8923DB2AE600B0BC1D /* TickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5DCF8823DB2AE600B0BC1D /* TickerViewController.swift */; };
 		8A5DCF8C23DB311C00B0BC1D /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A1FBADC23DB24480070279F /* SnapKit.framework */; };
 		8A5DCF8D23DB311C00B0BC1D /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8A1FBADC23DB24480070279F /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -79,6 +82,9 @@
 		8A58878D23DDDA4B008E2B4E /* NegativeSpread.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = NegativeSpread.json; sourceTree = "<group>"; };
 		8A58878F23DDDB37008E2B4E /* LowestHighestPrice.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = LowestHighestPrice.json; sourceTree = "<group>"; };
 		8A58879223DDE68F008E2B4E /* ConfirmOrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmOrderView.swift; sourceTree = "<group>"; };
+		8A5D5C9623DE6058000F45EC /* InputOrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputOrderView.swift; sourceTree = "<group>"; };
+		8A5D5C9823DE7112000F45EC /* OrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
+		8A5D5C9A23DE86E4000F45EC /* OrderTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTextField.swift; sourceTree = "<group>"; };
 		8A5DCF8823DB2AE600B0BC1D /* TickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerViewController.swift; sourceTree = "<group>"; };
 		8AB7BEB323DD23DA00C242A9 /* Ticker.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Ticker.json; sourceTree = "<group>"; };
 		8ABF981C23DD46A70086E997 /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
@@ -191,6 +197,9 @@
 			isa = PBXGroup;
 			children = (
 				8A58879223DDE68F008E2B4E /* ConfirmOrderView.swift */,
+				8A5D5C9623DE6058000F45EC /* InputOrderView.swift */,
+				8A5D5C9A23DE86E4000F45EC /* OrderTextField.swift */,
+				8A5D5C9823DE7112000F45EC /* OrderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -378,7 +387,10 @@
 				8A58879323DDE68F008E2B4E /* ConfirmOrderView.swift in Sources */,
 				8A2BB25D23DBEC4100D07F49 /* Price.swift in Sources */,
 				8ABF981D23DD46A70086E997 /* UILabelExtension.swift in Sources */,
+				8A5D5C9923DE7112000F45EC /* OrderView.swift in Sources */,
+				8A5D5C9B23DE86E4000F45EC /* OrderTextField.swift in Sources */,
 				8ABF982B23DD9E1A0086E997 /* UIColorExtension.swift in Sources */,
+				8A5D5C9723DE6058000F45EC /* InputOrderView.swift in Sources */,
 				8A0F86B623DC6F6B0024C807 /* APIRequest.swift in Sources */,
 				8A46A23223DB1917000700AE /* AppDelegate.swift in Sources */,
 				8A46A23423DB1917000700AE /* SceneDelegate.swift in Sources */,

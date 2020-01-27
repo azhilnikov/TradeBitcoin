@@ -51,7 +51,7 @@ final class SellPriceView: UIView {
   private func configurePriceLabel() {
     priceLabel.textAlignment = .center
     priceLabel.textColor = .defaultPrice
-    priceLabel.font = .systemFont(ofSize: 30)
+    priceLabel.font = .defaultPrice
     priceLabel.adjustsFontSizeToFitWidth = true
     priceLabel.minimumScaleFactor = 0.2
   }

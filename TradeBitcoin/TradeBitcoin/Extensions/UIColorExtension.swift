@@ -20,4 +20,6 @@ extension UIColor {
   static let upPrice = UIColor.green
   static let cancelBackground = UIColor(red: 76.0 / 255, green: 77.0 / 255, blue: 78.0 / 255, alpha: 1)
   static let confirmBackground = UIColor(red: 27.0 / 255, green: 142.0 / 255, blue: 154.0 / 255, alpha: 1)
+  static let order = UIColor(red: 33.0 / 255, green: 221.0 / 255, blue: 252.0 / 255, alpha: 1)
+  static let textFieldBackground = UIColor(red: 41.0 / 255, green: 42.0 / 255, blue: 43.0 / 255, alpha: 1)
 }

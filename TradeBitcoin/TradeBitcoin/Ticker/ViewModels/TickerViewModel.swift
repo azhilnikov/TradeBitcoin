@@ -141,6 +141,8 @@ final class TickerViewModel {
   }
 }
 
+// MARK: - APIRequestDelegate
+
 extension TickerViewModel: APIRequestDelegate {
   
   func didRequestComplete(_ result: Result<Data, Error>) {
@@ -155,6 +157,8 @@ extension TickerViewModel: APIRequestDelegate {
     }
   }
 }
+
+// MARK: - ConfirmOrderViewDelegate
 
 extension TickerViewModel: ConfirmOrderViewDelegate {
   
