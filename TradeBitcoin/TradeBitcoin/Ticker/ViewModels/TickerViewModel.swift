@@ -16,8 +16,8 @@ protocol TickerViewModelDelegate: class {
   func didUpdateSpread(_ spread: String)
   func didUpdateLowestPrice(_ price: String)
   func didUpdateHighestPrice(_ price: String)
-  func needToUpdateOrderUnits(_ units: Decimal)
-  func needToUpdateOrderAmount(_ amount: Decimal)
+  func needToUpdateOrderUnits(_ units: Decimal?)
+  func needToUpdateOrderAmount(_ amount: Decimal?)
   func updateOrderConfirm(isEnabled: Bool)
 }
 
@@ -172,6 +172,8 @@ extension TickerViewModel: InputOrderViewDelegate {
   func didUpdateOrder(_ value: Decimal?, orderType: OrderType) {
     guard let value = value, let price = price else {
       delegate?.updateOrderConfirm(isEnabled: false)
+      delegate?.needToUpdateOrderUnits(nil)
+      delegate?.needToUpdateOrderAmount(nil)
       return
     }
     
@@ -182,6 +184,8 @@ extension TickerViewModel: InputOrderViewDelegate {
     case .units:
       delegate?.needToUpdateOrderAmount(price.buy * value)
     }
+    
+    delegate?.updateOrderConfirm(isEnabled: true)
   }
 }
 

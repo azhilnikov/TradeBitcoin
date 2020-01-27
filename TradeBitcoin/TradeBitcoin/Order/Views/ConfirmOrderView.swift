@@ -35,6 +35,12 @@ final class ConfirmOrderView: UIView {
     fatalError("init(coder:) has not been implemented")
   }
   
+  func update(isEnabled: Bool) {
+    cancelButton.alpha = alphaFor(isEnabled)
+    confirmButton.alpha = alphaFor(isEnabled)
+    stackView.isUserInteractionEnabled = isEnabled
+  }
+  
   // MARK: - Private methods
   
   private func configureCancelButton() {
@@ -84,6 +90,10 @@ final class ConfirmOrderView: UIView {
     stackView.snp.makeConstraints { make in
       make.edges.equalTo(layoutMarginsGuide)
     }
+  }
+  
+  private func alphaFor(_ isEnabled: Bool) -> CGFloat {
+    return isEnabled ? 1 : 0.7
   }
   
   @objc private func didTapCancelButton() {

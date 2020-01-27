@@ -64,6 +64,7 @@ final class TickerViewController: UIViewController {
   }
   
   private func configureConfirmOrderView() {
+    confirmOrderView.update(isEnabled: false)
     confirmOrderView.delegate = viewModel
   }
   
@@ -119,13 +120,15 @@ extension TickerViewController: TickerViewModelDelegate {
     priceView.buyPriceView.updateHighestPrice(price)
   }
   
-  func needToUpdateOrderUnits(_ units: Decimal) {
+  func needToUpdateOrderUnits(_ units: Decimal?) {
     orderView.updateUnits(units)
   }
   
-  func needToUpdateOrderAmount(_ amount: Decimal) {
+  func needToUpdateOrderAmount(_ amount: Decimal?) {
     orderView.updateAmount(amount)
   }
   
-  func updateOrderConfirm(isEnabled: Bool) {}
+  func updateOrderConfirm(isEnabled: Bool) {
+    confirmOrderView.update(isEnabled: isEnabled)
+  }
 }

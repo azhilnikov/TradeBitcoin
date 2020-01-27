@@ -196,14 +196,6 @@
 			path = TradeBitcoinTests;
 			sourceTree = "<group>";
 		};
-		8A58879123DDE666008E2B4E /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				8A58879223DDE68F008E2B4E /* ConfirmOrderView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		8A5D5CA023DEE0AB000F45EC /* Order */ = {
 			isa = PBXGroup;
 			children = (
@@ -225,6 +217,7 @@
 		8A5D5CA223DEE0C5000F45EC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8A58879223DDE68F008E2B4E /* ConfirmOrderView.swift */,
 				8A5D5C9623DE6058000F45EC /* InputOrderView.swift */,
 				8A5D5C9823DE7112000F45EC /* OrderView.swift */,
 			);
@@ -293,7 +286,6 @@
 			children = (
 				8ABF983123DDA1E50086E997 /* ViewControllers */,
 				8ABF983023DDA1DA0086E997 /* ViewModels */,
-				8A58879123DDE666008E2B4E /* Views */,
 			);
 			path = Ticker;
 			sourceTree = "<group>";
