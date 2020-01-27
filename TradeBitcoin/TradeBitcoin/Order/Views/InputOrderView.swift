@@ -58,6 +58,7 @@ final class InputOrderView: UIView {
     textField.borderStyle = .roundedRect
     textField.autocorrectionType = .no
     textField.textAlignment = .center
+    textField.textColor = .white
     textField.layer.cornerRadius = 8
     textField.layer.borderWidth = 1
     textField.layer.masksToBounds = true
