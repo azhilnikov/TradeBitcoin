@@ -11,11 +11,11 @@ import Foundation
 typealias TickerPrice = [String: Price]
 
 protocol TickerViewModelDelegate: class {
-  func didUpdateSellPrice(_ price: String, direction: PriceDirection)
-  func didUpdateBuyPrice(_ price: String, direction: PriceDirection)
-  func didUpdateSpread(_ spread: String)
-  func didUpdateLowestPrice(_ price: String)
-  func didUpdateHighestPrice(_ price: String)
+  func didUpdateSellPrice(_ price: String?, direction: PriceDirection)
+  func didUpdateBuyPrice(_ price: String?, direction: PriceDirection)
+  func didUpdateSpread(_ spread: String?)
+  func didUpdateLowestPrice(_ price: String?)
+  func didUpdateHighestPrice(_ price: String?)
   func needToUpdateOrderUnits(_ units: Decimal?)
   func needToUpdateOrderAmount(_ amount: Decimal?)
   func updateOrderConfirm(isEnabled: Bool)
@@ -62,6 +62,9 @@ final class TickerViewModel {
     }
   }
   
+  private var previousSellPrice: Decimal?
+  private var previousBuyPrice: Decimal?
+  
   private var timer: Timer?
   private lazy var numberFormatter: NumberFormatter = {
     let numberFormatter = NumberFormatter()
@@ -106,8 +109,11 @@ final class TickerViewModel {
   private func processSellPrice(_ price: Price) {
     if let sellPrice = numberFormatter.string(from: price.sell as NSDecimalNumber) {
       delegate?.didUpdateSellPrice(sellPrice,
-                                   direction: priceDirection(currentPrice: price.sell, lastPrice: price.last))
+                                   direction: priceDirection(currentPrice: price.sell,
+                                                             lastPrice: previousSellPrice))
     }
+    
+    previousSellPrice = price.sell
     
     if let lowestPrice = lowestSellPrice {
       if price.sell < lowestPrice {
@@ -121,8 +127,11 @@ final class TickerViewModel {
   private func processBuyPrice(_ price: Price) {
     if let buyPrice = numberFormatter.string(from: price.buy as NSDecimalNumber) {
       delegate?.didUpdateBuyPrice(buyPrice,
-                                   direction: priceDirection(currentPrice: price.buy, lastPrice: price.last))
+                                   direction: priceDirection(currentPrice: price.buy,
+                                                             lastPrice: previousBuyPrice))
     }
+    
+    previousBuyPrice = price.buy
     
     if let highestPrice = highestBuyPrice {
       if price.buy > highestPrice {
@@ -139,7 +148,11 @@ final class TickerViewModel {
     }
   }
   
-  private func priceDirection(currentPrice: Decimal, lastPrice: Decimal) -> PriceDirection {
+  private func priceDirection(currentPrice: Decimal, lastPrice: Decimal?) -> PriceDirection {
+    guard let lastPrice = lastPrice else {
+      return .same
+    }
+    
     if currentPrice == lastPrice {
       return .same
     }

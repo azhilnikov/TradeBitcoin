@@ -29,6 +29,7 @@
 		8A5DCF8C23DB311C00B0BC1D /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A1FBADC23DB24480070279F /* SnapKit.framework */; };
 		8A5DCF8D23DB311C00B0BC1D /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8A1FBADC23DB24480070279F /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8A7019F423DF0076007ED00B /* InputOrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7019F323DF0076007ED00B /* InputOrderViewModel.swift */; };
+		8A7BE14B23DF25D100A50E3F /* InputOrderViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7BE14A23DF25D100A50E3F /* InputOrderViewModelTests.swift */; };
 		8AB7BEB423DD23DA00C242A9 /* Ticker.json in Resources */ = {isa = PBXBuildFile; fileRef = 8AB7BEB323DD23DA00C242A9 /* Ticker.json */; };
 		8ABF981D23DD46A70086E997 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABF981C23DD46A70086E997 /* UILabelExtension.swift */; };
 		8ABF981F23DD4B860086E997 /* BuyPriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABF981E23DD4B860086E997 /* BuyPriceView.swift */; };
@@ -88,6 +89,7 @@
 		8A5D5C9E23DEDFA4000F45EC /* OrderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderType.swift; sourceTree = "<group>"; };
 		8A5DCF8823DB2AE600B0BC1D /* TickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerViewController.swift; sourceTree = "<group>"; };
 		8A7019F323DF0076007ED00B /* InputOrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputOrderViewModel.swift; sourceTree = "<group>"; };
+		8A7BE14A23DF25D100A50E3F /* InputOrderViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputOrderViewModelTests.swift; sourceTree = "<group>"; };
 		8AB7BEB323DD23DA00C242A9 /* Ticker.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Ticker.json; sourceTree = "<group>"; };
 		8ABF981C23DD46A70086E997 /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
 		8ABF981E23DD4B860086E997 /* BuyPriceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyPriceView.swift; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 			children = (
 				8A0F86BA23DC917D0024C807 /* TestsData */,
 				8A0F86B723DC913A0024C807 /* TestsHelper */,
+				8A7BE14A23DF25D100A50E3F /* InputOrderViewModelTests.swift */,
 				8A0F86BD23DC93A40024C807 /* PriceParsingTests.swift */,
 				8A0F86B023DC59590024C807 /* TickerViewModelTests.swift */,
 				8A46A24A23DB1919000700AE /* Info.plist */,
@@ -437,6 +440,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A7BE14B23DF25D100A50E3F /* InputOrderViewModelTests.swift in Sources */,
 				8A0F86BE23DC93A40024C807 /* PriceParsingTests.swift in Sources */,
 				8A0F86B123DC59590024C807 /* TickerViewModelTests.swift in Sources */,
 				8A0F86B923DC91550024C807 /* TestsHelper.swift in Sources */,

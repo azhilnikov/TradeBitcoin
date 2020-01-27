@@ -100,32 +100,32 @@ final class TickerViewController: UIViewController {
 
 extension TickerViewController: TickerViewModelDelegate {
   
-  func didUpdateSellPrice(_ price: String, direction: PriceDirection) {
+  func didUpdateSellPrice(_ price: String?, direction: PriceDirection) {
     priceView.sellPriceView.updatePrice(price, direction: direction)
   }
   
-  func didUpdateBuyPrice(_ price: String, direction: PriceDirection) {
+  func didUpdateBuyPrice(_ price: String?, direction: PriceDirection) {
     priceView.buyPriceView.updatePrice(price, direction: direction)
   }
   
-  func didUpdateSpread(_ spread: String) {
+  func didUpdateSpread(_ spread: String?) {
     spreadLabel.text = spread
   }
   
-  func didUpdateLowestPrice(_ price: String) {
+  func didUpdateLowestPrice(_ price: String?) {
     priceView.sellPriceView.updateLowestPrice(price)
   }
   
-  func didUpdateHighestPrice(_ price: String) {
+  func didUpdateHighestPrice(_ price: String?) {
     priceView.buyPriceView.updateHighestPrice(price)
   }
   
   func needToUpdateOrderUnits(_ units: Decimal?) {
-    orderView.updateUnits(units)
+    orderView.unitsInputOrderView.update(units)
   }
   
   func needToUpdateOrderAmount(_ amount: Decimal?) {
-    orderView.updateAmount(amount)
+    orderView.amountInputOrderView.update(amount)
   }
   
   func updateOrderConfirm(isEnabled: Bool) {

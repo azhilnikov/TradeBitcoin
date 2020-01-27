@@ -27,14 +27,6 @@ final class OrderView: UIView {
     fatalError("init(coder:) has not been implemented")
   }
   
-  func updateUnits(_ units: Decimal?) {
-    unitsInputOrderView.update(units)
-  }
-  
-  func updateAmount(_ amount: Decimal?) {
-    amountInputOrderView.update(amount)
-  }
-  
   // MARK: - Private methods
   
   private func configureStackView() {

@@ -24,7 +24,7 @@ final class InputOrderViewModel {
     self.orderType = orderType
   }
   
-  func shouldChangeValue(_ currentValue: String?, newValue: String) -> Bool {
+  func shouldChange(_ currentValue: String?, by newValue: String) -> Bool {
     if newValue.isEmpty {
       return true
     }

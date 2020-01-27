@@ -44,10 +44,10 @@ class TickerViewModelTests: XCTestCase {
     XCTAssertEqual(mockTickerViewController.sellPrice, "6,347.52")
   }
   
-  func testUpdateSellPriceDirection() {
+  func testUpdateFirstSellPriceDirection() {
     let data = TestsHelper.loadData(from: "Ticker")!
     apiRequest.delegate?.didRequestComplete(.success(data))
-    XCTAssertEqual(mockTickerViewController.sellPriceDirection, .down)
+    XCTAssertEqual(mockTickerViewController.sellPriceDirection, .same)
   }
   
   func testUpdateLowestSellPrice() {
@@ -62,10 +62,10 @@ class TickerViewModelTests: XCTestCase {
     XCTAssertEqual(mockTickerViewController.buyPrice, "6,347.53")
   }
   
-  func testUpdateBuyPriceDirection() {
+  func testUpdateFirstBuyPriceDirection() {
     let data = TestsHelper.loadData(from: "Ticker")!
     apiRequest.delegate?.didRequestComplete(.success(data))
-    XCTAssertEqual(mockTickerViewController.buyPriceDirection, .down)
+    XCTAssertEqual(mockTickerViewController.buyPriceDirection, .same)
   }
   
   func testUpdateHighestBuyPrice() {
@@ -99,14 +99,18 @@ class TickerViewModelTests: XCTestCase {
   }
   
   func testUpDirectionSellPrice() {
-    let data = TestsHelper.loadData(from: "SellPriceHigherThanLast")!
-    apiRequest.delegate?.didRequestComplete(.success(data))
+    let data1 = TestsHelper.loadData(from: "Ticker")!
+    apiRequest.delegate?.didRequestComplete(.success(data1))
+    let data2 = TestsHelper.loadData(from: "SellPriceHigherThanLast")!
+    apiRequest.delegate?.didRequestComplete(.success(data2))
     XCTAssertEqual(mockTickerViewController.sellPriceDirection, .up)
   }
   
   func testUpDirectionBuyPrice() {
-    let data = TestsHelper.loadData(from: "BuyPriceHigherThanLast")!
-    apiRequest.delegate?.didRequestComplete(.success(data))
+    let data1 = TestsHelper.loadData(from: "Ticker")!
+    apiRequest.delegate?.didRequestComplete(.success(data1))
+    let data2 = TestsHelper.loadData(from: "BuyPriceHigherThanLast")!
+    apiRequest.delegate?.didRequestComplete(.success(data2))
     XCTAssertEqual(mockTickerViewController.buyPriceDirection, .up)
   }
   
@@ -141,43 +145,108 @@ class TickerViewModelTests: XCTestCase {
     apiRequest.delegate?.didRequestComplete(.success(data2))
     XCTAssertEqual(mockTickerViewController.highestBuyPrice, "6,349.21")
   }
+  
+  func testNilUnitsOrderUpdate() {
+    sut.didUpdateOrder(nil, orderType: .units)
+    XCTAssertNil(mockTickerViewController.units)
+  }
+  
+  func testNilAmountOrderUpdate() {
+    sut.didUpdateOrder(nil, orderType: .amount)
+    XCTAssertNil(mockTickerViewController.amount)
+  }
+  
+  func testConfirmIsNotEnabledAfterNilUnitsOrderUpdate() {
+    sut.didUpdateOrder(nil, orderType: .units)
+    XCTAssertFalse(mockTickerViewController.isConfirmEnabled)
+  }
+  
+  func testConfirmIsNotEnabledAfterNilAmountOrderUpdate() {
+    sut.didUpdateOrder(nil, orderType: .amount)
+    XCTAssertFalse(mockTickerViewController.isConfirmEnabled)
+  }
+  
+  func testUnitsOrderUpdate() {
+    let data = TestsHelper.loadData(from: "Ticker")!
+    apiRequest.delegate?.didRequestComplete(.success(data))
+    sut.didUpdateOrder(Decimal(15.09), orderType: .units)
+    guard let amount = mockTickerViewController.amount else {
+      XCTFail()
+      return
+    }
+    XCTAssertEqual((amount as NSDecimalNumber).doubleValue, 95784.23, accuracy: 0.01)
+  }
+  
+  func testConfirmIsEnabledAfterUnitsOrderUpdate() {
+    let data = TestsHelper.loadData(from: "Ticker")!
+    apiRequest.delegate?.didRequestComplete(.success(data))
+    sut.didUpdateOrder(Decimal(15.09), orderType: .units)
+    XCTAssertTrue(mockTickerViewController.isConfirmEnabled)
+  }
+  
+  func testAmountOrderUpdate() {
+    let data = TestsHelper.loadData(from: "Ticker")!
+    apiRequest.delegate?.didRequestComplete(.success(data))
+    sut.didUpdateOrder(Decimal(11.94), orderType: .amount)
+    guard let units = mockTickerViewController.units else {
+      XCTFail()
+      return
+    }
+    XCTAssertEqual((units as NSDecimalNumber).doubleValue, 531.62, accuracy: 0.01)
+  }
+  
+  func testConfirmIsEnabledAfterAmountOrderUpdate() {
+    let data = TestsHelper.loadData(from: "Ticker")!
+    apiRequest.delegate?.didRequestComplete(.success(data))
+    sut.didUpdateOrder(Decimal(11.94), orderType: .amount)
+    XCTAssertTrue(mockTickerViewController.isConfirmEnabled)
+  }
 }
 
 private class MockTickerViewController: TickerViewModelDelegate {
   
-  private(set) var sellPrice = ""
+  private(set) var sellPrice: String?
   private(set) var sellPriceDirection: PriceDirection = .same
-  private(set) var buyPrice = ""
+  private(set) var buyPrice: String?
   private(set) var buyPriceDirection: PriceDirection = .same
-  private(set) var spread = ""
+  private(set) var spread: String?
   private(set) var lowestSellPrice: String?
   private(set) var highestBuyPrice: String?
+  private(set) var units: Decimal?
+  private(set) var amount: Decimal?
+  private(set) var isConfirmEnabled = false
   
-  func didUpdateSellPrice(_ price: String, direction: PriceDirection) {
+  func didUpdateSellPrice(_ price: String?, direction: PriceDirection) {
     sellPrice = price
     sellPriceDirection = direction
   }
   
-  func didUpdateBuyPrice(_ price: String, direction: PriceDirection) {
+  func didUpdateBuyPrice(_ price: String?, direction: PriceDirection) {
     buyPrice = price
     buyPriceDirection = direction
   }
   
-  func didUpdateSpread(_ spread: String) {
+  func didUpdateSpread(_ spread: String?) {
     self.spread = spread
   }
   
-  func didUpdateLowestPrice(_ price: String) {
+  func didUpdateLowestPrice(_ price: String?) {
     lowestSellPrice = price
   }
   
-  func didUpdateHighestPrice(_ price: String) {
+  func didUpdateHighestPrice(_ price: String?) {
     highestBuyPrice = price
   }
   
-  func needToUpdateOrderUnits(_ units: Decimal) {}
+  func needToUpdateOrderUnits(_ units: Decimal?) {
+    self.units = units
+  }
   
-  func needToUpdateOrderAmount(_ amount: Decimal) {}
+  func needToUpdateOrderAmount(_ amount: Decimal?) {
+    self.amount = amount
+  }
   
-  func updateOrderConfirm(isEnabled: Bool) {}
+  func updateOrderConfirm(isEnabled: Bool) {
+    isConfirmEnabled = isEnabled
+  }
 }

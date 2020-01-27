@@ -30,12 +30,12 @@ final class SellPriceView: UIView {
     fatalError("init(coder:) has not been implemented")
   }
   
-  func updatePrice(_ price: String, direction: PriceDirection) {
+  func updatePrice(_ price: String?, direction: PriceDirection) {
     priceLabel.updatePrice(price, direction: direction)
   }
   
-  func updateLowestPrice(_ price: String) {
-    lowestPriceLabel.text = "\(lowestPriceTitle) \(price)"
+  func updateLowestPrice(_ price: String?) {
+    lowestPriceLabel.text = "\(lowestPriceTitle) \(price ?? "")"
   }
   
   // MARK: - Private methods

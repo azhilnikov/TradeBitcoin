@@ -10,7 +10,12 @@ import UIKit
 
 extension UILabel {
   
-  func updatePrice(_ price: String, direction: PriceDirection) {
+  func updatePrice(_ price: String?, direction: PriceDirection) {
+    guard let price = price else {
+      text = "-"
+      return
+    }
+    
     let attributedString = NSMutableAttributedString(string: price)
     
     let dotRange = (price as NSString).range(of: ".")
