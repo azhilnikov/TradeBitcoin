@@ -10,16 +10,14 @@ import UIKit
 
 final class OrderView: UIView {
   
-  let unitsInputOrderView = InputOrderView()
-  let amountInputOrderView = InputOrderView()
+  let unitsInputOrderView = InputOrderView(viewModel: InputOrderViewModel(orderType: .units))
+  let amountInputOrderView = InputOrderView(viewModel: InputOrderViewModel(orderType: .amount))
   
   private let stackView = UIStackView()
   
   override init(frame: CGRect) {
     super.init(frame: frame)
     
-    configureUnitsInputOrderView()
-    configureAmountInputOrderView()
     configureStackView()
     configureView()
     configureLayoutConstraints()
@@ -29,15 +27,15 @@ final class OrderView: UIView {
     fatalError("init(coder:) has not been implemented")
   }
   
+  func updateUnits(_ units: Decimal) {
+    unitsInputOrderView.update(units)
+  }
+  
+  func updateAmount(_ amount: Decimal) {
+    amountInputOrderView.update(amount)
+  }
+  
   // MARK: - Private methods
-  
-  private func configureUnitsInputOrderView() {
-    unitsInputOrderView.setOrderType(.units)
-  }
-  
-  private func configureAmountInputOrderView() {
-    amountInputOrderView.setOrderType(.amount)
-  }
   
   private func configureStackView() {
     stackView.axis = .horizontal

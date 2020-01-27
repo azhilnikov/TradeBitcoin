@@ -57,7 +57,10 @@ final class TickerViewController: UIViewController {
   
   private func configureOrderView() {
     orderView.unitsInputOrderView.setTitle("Units")
+    orderView.unitsInputOrderView.delegate = viewModel
+    
     orderView.amountInputOrderView.setTitle("Amount (\(viewModel.currencySymbol ?? ""))")
+    orderView.amountInputOrderView.delegate = viewModel    
   }
   
   private func configureConfirmOrderView() {
@@ -115,4 +118,14 @@ extension TickerViewController: TickerViewModelDelegate {
   func didUpdateHighestPrice(_ price: String) {
     priceView.buyPriceView.updateHighestPrice(price)
   }
+  
+  func needToUpdateOrderUnits(_ units: Decimal) {
+    orderView.updateUnits(units)
+  }
+  
+  func needToUpdateOrderAmount(_ amount: Decimal) {
+    orderView.updateAmount(amount)
+  }
+  
+  func updateOrderConfirm(isEnabled: Bool) {}
 }

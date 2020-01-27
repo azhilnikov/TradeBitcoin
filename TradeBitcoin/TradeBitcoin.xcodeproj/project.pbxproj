@@ -24,10 +24,11 @@
 		8A58879323DDE68F008E2B4E /* ConfirmOrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A58879223DDE68F008E2B4E /* ConfirmOrderView.swift */; };
 		8A5D5C9723DE6058000F45EC /* InputOrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5D5C9623DE6058000F45EC /* InputOrderView.swift */; };
 		8A5D5C9923DE7112000F45EC /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5D5C9823DE7112000F45EC /* OrderView.swift */; };
-		8A5D5C9B23DE86E4000F45EC /* OrderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5D5C9A23DE86E4000F45EC /* OrderTextField.swift */; };
+		8A5D5C9F23DEDFA4000F45EC /* OrderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5D5C9E23DEDFA4000F45EC /* OrderType.swift */; };
 		8A5DCF8923DB2AE600B0BC1D /* TickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5DCF8823DB2AE600B0BC1D /* TickerViewController.swift */; };
 		8A5DCF8C23DB311C00B0BC1D /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A1FBADC23DB24480070279F /* SnapKit.framework */; };
 		8A5DCF8D23DB311C00B0BC1D /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8A1FBADC23DB24480070279F /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8A7019F423DF0076007ED00B /* InputOrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7019F323DF0076007ED00B /* InputOrderViewModel.swift */; };
 		8AB7BEB423DD23DA00C242A9 /* Ticker.json in Resources */ = {isa = PBXBuildFile; fileRef = 8AB7BEB323DD23DA00C242A9 /* Ticker.json */; };
 		8ABF981D23DD46A70086E997 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABF981C23DD46A70086E997 /* UILabelExtension.swift */; };
 		8ABF981F23DD4B860086E997 /* BuyPriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABF981E23DD4B860086E997 /* BuyPriceView.swift */; };
@@ -84,8 +85,9 @@
 		8A58879223DDE68F008E2B4E /* ConfirmOrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmOrderView.swift; sourceTree = "<group>"; };
 		8A5D5C9623DE6058000F45EC /* InputOrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputOrderView.swift; sourceTree = "<group>"; };
 		8A5D5C9823DE7112000F45EC /* OrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
-		8A5D5C9A23DE86E4000F45EC /* OrderTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTextField.swift; sourceTree = "<group>"; };
+		8A5D5C9E23DEDFA4000F45EC /* OrderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderType.swift; sourceTree = "<group>"; };
 		8A5DCF8823DB2AE600B0BC1D /* TickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerViewController.swift; sourceTree = "<group>"; };
+		8A7019F323DF0076007ED00B /* InputOrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputOrderViewModel.swift; sourceTree = "<group>"; };
 		8AB7BEB323DD23DA00C242A9 /* Ticker.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Ticker.json; sourceTree = "<group>"; };
 		8ABF981C23DD46A70086E997 /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
 		8ABF981E23DD4B860086E997 /* BuyPriceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyPriceView.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 				8A0F86B223DC6BB50024C807 /* API */,
 				8ABF982923DD9DF10086E997 /* Extensions */,
 				8ABF982C23DDA17B0086E997 /* Price */,
+				8A5D5CA023DEE0AB000F45EC /* Order */,
 				8ABF982F23DDA1CD0086E997 /* Ticker */,
 			);
 			path = TradeBitcoin;
@@ -197,11 +200,43 @@
 			isa = PBXGroup;
 			children = (
 				8A58879223DDE68F008E2B4E /* ConfirmOrderView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8A5D5CA023DEE0AB000F45EC /* Order */ = {
+			isa = PBXGroup;
+			children = (
+				8A5D5CA123DEE0BD000F45EC /* Models */,
+				8ABDFC4523DF0C320000FF44 /* ViewModels */,
+				8A5D5CA223DEE0C5000F45EC /* Views */,
+			);
+			path = Order;
+			sourceTree = "<group>";
+		};
+		8A5D5CA123DEE0BD000F45EC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8A5D5C9E23DEDFA4000F45EC /* OrderType.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8A5D5CA223DEE0C5000F45EC /* Views */ = {
+			isa = PBXGroup;
+			children = (
 				8A5D5C9623DE6058000F45EC /* InputOrderView.swift */,
-				8A5D5C9A23DE86E4000F45EC /* OrderTextField.swift */,
 				8A5D5C9823DE7112000F45EC /* OrderView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		8ABDFC4523DF0C320000FF44 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				8A7019F323DF0076007ED00B /* InputOrderViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		8ABF982523DD9C230086E997 /* SupportingFiles */ = {
@@ -388,9 +423,9 @@
 				8A2BB25D23DBEC4100D07F49 /* Price.swift in Sources */,
 				8ABF981D23DD46A70086E997 /* UILabelExtension.swift in Sources */,
 				8A5D5C9923DE7112000F45EC /* OrderView.swift in Sources */,
-				8A5D5C9B23DE86E4000F45EC /* OrderTextField.swift in Sources */,
 				8ABF982B23DD9E1A0086E997 /* UIColorExtension.swift in Sources */,
 				8A5D5C9723DE6058000F45EC /* InputOrderView.swift in Sources */,
+				8A7019F423DF0076007ED00B /* InputOrderViewModel.swift in Sources */,
 				8A0F86B623DC6F6B0024C807 /* APIRequest.swift in Sources */,
 				8A46A23223DB1917000700AE /* AppDelegate.swift in Sources */,
 				8A46A23423DB1917000700AE /* SceneDelegate.swift in Sources */,
@@ -399,6 +434,7 @@
 				8A5DCF8923DB2AE600B0BC1D /* TickerViewController.swift in Sources */,
 				8ABF982123DD4C810086E997 /* PriceView.swift in Sources */,
 				8AECB24323DD2FAA00B60D17 /* PriceDirection.swift in Sources */,
+				8A5D5C9F23DEDFA4000F45EC /* OrderType.swift in Sources */,
 				8ABF983323DDAA4C0086E997 /* UIFontExtension.swift in Sources */,
 				8ABF981F23DD4B860086E997 /* BuyPriceView.swift in Sources */,
 				8A0F86B423DC6BD30024C807 /* APIErrors.swift in Sources */,

@@ -174,4 +174,10 @@ private class MockTickerViewController: TickerViewModelDelegate {
   func didUpdateHighestPrice(_ price: String) {
     highestBuyPrice = price
   }
+  
+  func needToUpdateOrderUnits(_ units: Decimal) {}
+  
+  func needToUpdateOrderAmount(_ amount: Decimal) {}
+  
+  func updateOrderConfirm(isEnabled: Bool) {}
 }
