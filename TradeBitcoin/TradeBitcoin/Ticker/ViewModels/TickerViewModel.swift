@@ -23,10 +23,11 @@ protocol TickerViewModelDelegate: class {
 
 final class TickerViewModel {
   
+  let localeIdentifier: String
+  
   weak var delegate: TickerViewModelDelegate?
   private(set) var currencySymbol: String?
   
-  private let localeIdentifier: String
   private let request: APIRequest
   private let pollingInterval: TimeInterval = 15
   

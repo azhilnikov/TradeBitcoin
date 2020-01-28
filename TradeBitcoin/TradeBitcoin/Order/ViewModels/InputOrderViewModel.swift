@@ -12,16 +12,19 @@ final class InputOrderViewModel {
   
   let orderType: OrderType
   
+  private let localeIdentifier: String
   private lazy var numberFormatter: NumberFormatter = {
     let numberFormatter = NumberFormatter()
+    numberFormatter.locale = Locale(identifier: localeIdentifier)
     numberFormatter.numberStyle = orderType.numberStyle
     numberFormatter.maximumFractionDigits = 2
     numberFormatter.currencySymbol = ""
     return numberFormatter
   }()
   
-  init(orderType: OrderType) {
+  init(orderType: OrderType, localeIdentifier: String) {
     self.orderType = orderType
+    self.localeIdentifier = localeIdentifier
   }
   
   func shouldChange(_ currentValue: String?, by newValue: String) -> Bool {

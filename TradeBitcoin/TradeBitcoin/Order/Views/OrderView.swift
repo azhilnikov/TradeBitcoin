@@ -10,13 +10,21 @@ import UIKit
 
 final class OrderView: UIView {
   
-  let unitsInputOrderView = InputOrderView(viewModel: InputOrderViewModel(orderType: .units))
-  let amountInputOrderView = InputOrderView(viewModel: InputOrderViewModel(orderType: .amount))
+  private(set) lazy var unitsInputOrderView: InputOrderView = {
+    return InputOrderView(viewModel: InputOrderViewModel(orderType: .units,
+                                                         localeIdentifier: localeIdentifier))
+  }()
+  private(set) lazy var amountInputOrderView: InputOrderView = {
+    return InputOrderView(viewModel: InputOrderViewModel(orderType: .amount,
+                                                         localeIdentifier: localeIdentifier))
+  }()
   
+  private let localeIdentifier: String
   private let stackView = UIStackView()
   
-  override init(frame: CGRect) {
-    super.init(frame: frame)
+  required init(localeIdentifier: String) {
+    self.localeIdentifier = localeIdentifier
+    super.init(frame: .zero)
     
     configureStackView()
     configureView()

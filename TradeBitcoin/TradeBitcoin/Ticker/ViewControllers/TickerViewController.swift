@@ -14,7 +14,7 @@ final class TickerViewController: UIViewController {
   private let viewModel: TickerViewModel
   private let priceView = PriceView()
   private let spreadLabel = UILabel()
-  private let orderView = OrderView()
+  private lazy var orderView = OrderView(localeIdentifier: viewModel.localeIdentifier)
   private let confirmOrderView = ConfirmOrderView()
   
   init(viewModel: TickerViewModel) {

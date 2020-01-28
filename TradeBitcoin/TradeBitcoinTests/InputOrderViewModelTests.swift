@@ -16,7 +16,7 @@ class InputOrderViewModelTests: XCTestCase {
   override func setUp() {
     super.setUp()
     
-    sut = InputOrderViewModel(orderType: .amount)
+    sut = InputOrderViewModel(orderType: .amount, localeIdentifier: "en-GB")
   }
 
   override func tearDown() {
